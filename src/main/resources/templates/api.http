@@ -1,0 +1,21 @@
+###SIGN UP
+POST http://localhost:8081/api/auth/signup
+Content-Type: application/json
+
+{
+  "fullName":"Ali",
+  "login":"aliii",
+  "password": "admin123"
+}
+
+###LOGIN
+POST http://localhost:8081/api/auth/login
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiVVNFUiIsInVzZXJJZCI6MSwic3ViIjoiYWRtaW4iLCJpYXQiOjE3Njg1NjM0NTksImV4cCI6MTc2ODY0OTg1OX0.kh-4TjUf3dlMNlTWkhHFycW4TCl26CjVUzVIgYyKCHILeIME8kyo3xbKFzyuZxVB8E_Z8qKfsWlXkU0NJwEEhg
+
+{
+  "login": "admin",
+  "password": "admin123"
+}
+
+###
