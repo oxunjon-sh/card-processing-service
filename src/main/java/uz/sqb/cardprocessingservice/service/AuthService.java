@@ -13,6 +13,7 @@ import uz.sqb.cardprocessingservice.dto.AuthResponse;
 import uz.sqb.cardprocessingservice.dto.SignupRequest;
 import uz.sqb.cardprocessingservice.entity.UserEntity;
 import uz.sqb.cardprocessingservice.enums.RoleEnum;
+import uz.sqb.cardprocessingservice.exp.UserAlreadyExistsException;
 import uz.sqb.cardprocessingservice.jwt.JwtUtil;
 import uz.sqb.cardprocessingservice.repository.UserRepository;
 
@@ -30,7 +31,7 @@ public class AuthService {
     public AuthResponse signup(SignupRequest request) {
 
         if (userRepository.findByLogin(request.getLogin()).isPresent()) {
-            throw new RuntimeException("Login already exists");
+            throw new UserAlreadyExistsException(request.getLogin());
         }
         UserEntity user = UserEntity.builder()
                 .fullName(request.getFullName())

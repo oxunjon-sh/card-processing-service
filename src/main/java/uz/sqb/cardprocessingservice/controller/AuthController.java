@@ -2,6 +2,7 @@ package uz.sqb.cardprocessingservice.controller;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,6 +12,7 @@ import uz.sqb.cardprocessingservice.dto.SignupRequest;
 import uz.sqb.cardprocessingservice.service.AuthService;
 
 
+@Slf4j
 @RestController
 @RequestMapping("/api/auth")
 @RequiredArgsConstructor

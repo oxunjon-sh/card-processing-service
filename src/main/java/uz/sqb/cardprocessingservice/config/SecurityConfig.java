@@ -39,6 +39,8 @@ public class SecurityConfig {
                         auth.
                                 requestMatchers("/api/auth/**").permitAll()
                                 .requestMatchers("/api/health").permitAll()
+                                .requestMatchers("/error").permitAll()
+//                                .requestMatchers("/api/auth/login").permitAll()
                                 .requestMatchers("/api/admin/**").hasRole("ADMIN")
                                 .requestMatchers("/api/cards/**").authenticated()
 
