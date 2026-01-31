@@ -14,7 +14,7 @@ import uz.sqb.cardprocessingservice.service.AuthService;
 
 @Slf4j
 @RestController
-@RequestMapping("/api/auth")
+@RequestMapping("/auth")
 @RequiredArgsConstructor
 public class AuthController {
     private final AuthService authService;
